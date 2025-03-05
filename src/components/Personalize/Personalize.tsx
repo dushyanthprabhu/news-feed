@@ -3,7 +3,6 @@ import {
   DialogClose,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -43,7 +42,7 @@ function Personalize({}: PersonalizeProps) {
 
   console.log(personalizeFeeds);
 
-  const onAddClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
+  const onAddClick = async () => {
     dispath(updatePersonalizeList(formData));
   };
 

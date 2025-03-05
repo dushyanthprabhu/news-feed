@@ -15,7 +15,6 @@ interface DropdownProps {
 }
 
 export function Dropdown({
-  className,
   listItems,
   itemSelected,
   setItemSelected,

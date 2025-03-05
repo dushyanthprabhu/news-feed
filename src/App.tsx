@@ -8,7 +8,6 @@ import { fetchCountryNews, getPersonalizedArticles } from "@/api/api";
 import { Article, PersonalizeForm } from "@/inerface";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import RecentFeed from "./components/RecentFeed/RecentFeed";
 import { RootState } from "./redux/store";
 
 function App() {

@@ -23,9 +23,6 @@ function NewsFeed({}: NewsFeedProps) {
   const searchArticles = useSelector(
     (state: RootState) => state.searcharticle.searchArticles
   );
-  const recentlyVie = useSelector(
-    (state: RootState) => state.newsfeed.recentlyViewed
-  );
   const searchKeyword = useSelector(
     (state: RootState) => state.searcharticle.searchKeyword
   );

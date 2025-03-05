@@ -56,7 +56,7 @@ function Search({}: SearchProps) {
     navigate("/view");
   };
 
-  const onSearch = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const onSearch = () => {
     dispatch(setSearch());
     navigate("/");
   };

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import { Dropdown } from "../Dropdown/Dropdown";
-import { categories, language } from "@/constant";
+import { categories } from "@/constant";
 import { DateRange } from "../DateRange/DateRange";
 import React from "react";
 
