@@ -27,7 +27,7 @@ const fetchCountryNews = async () => {
   }
 };
 
-const searchArticles = async (keyword: string | '') => {
+const searchArticles = async (keyword: string | "") => {
   try {
     const response = await axios.get(baseUrl + everything, {
       params: {
@@ -38,27 +38,23 @@ const searchArticles = async (keyword: string | '') => {
     const articles = response.data.articles;
     return articles;
   } catch (error) {
-    console.error("Error fetching Indian news:", error);
+    console.error("Error fetching news:", error);
   }
-
-
-
 };
 
 const getPersonalizedArticles = async (personalizeInfo: PersonalizeForm) => {
   try {
     const response = await axios.get(baseUrl + everything, {
       params: {
-        sources: personalizeInfo.source,
-        category: personalizeInfo.category,
+        ...personalizeInfo,
         apiKey: apiKey,
       },
     });
     const articles = response.data.articles;
     return articles;
   } catch (error) {
-    console.error("Error fetching Indian news:", error);
+    console.error("Error fetching news:", error);
   }
 };
 
-export { fetchCountryNews, searchArticles };
+export { fetchCountryNews, searchArticles, getPersonalizedArticles };

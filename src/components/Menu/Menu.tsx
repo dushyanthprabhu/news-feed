@@ -16,12 +16,11 @@ import React from "react";
 interface MenuProps {}
 
 function Menu({}: MenuProps) {
-  const [itemSelected, setItemSelected] = React.useState<String>('');
-  
+  const [itemSelected, setItemSelected] = React.useState<string>("");
 
-  const applyFilter=()=>{
-
-  }
+  const applyFilter = () => {
+    console.log(itemSelected);
+  };
 
   return (
     <Sheet>
@@ -30,12 +29,20 @@ function Menu({}: MenuProps) {
         <SheetHeader>
           <SheetTitle>Add Filters</SheetTitle>
         </SheetHeader>
-        <Dropdown listItems={language} />
-        <Dropdown listItems={categories} />
+        {/* <Dropdown
+          listItems={language}
+          setItemSelected={setItemSelected}
+          itemSelected={itemSelected}
+        /> */}
+        <Dropdown
+          listItems={categories}
+          setItemSelected={setItemSelected}
+          itemSelected={itemSelected}
+        />
         <DateRange />
         <SheetFooter>
           <SheetClose asChild>
-            <Button>Apply</Button>
+            <Button onClick={applyFilter}>Apply</Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
