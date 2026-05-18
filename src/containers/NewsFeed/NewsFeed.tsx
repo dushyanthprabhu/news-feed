@@ -42,7 +42,6 @@ function NewsFeed({}: NewsFeedProps) {
       <div className="grid gap-5 tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-3">
         {searchArticles.length > 0 || articles?.length > 0
           ? getArticles()?.map((article: Article) => {
-              console.log(article);
               return <ArticleCard article={article} />;
             })
           : Array.from({ length: 15 }).map((_, index) => {

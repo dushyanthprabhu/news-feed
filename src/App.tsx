@@ -40,7 +40,7 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path="/" element={<NewsFeed />} />
+            <Route path="/news-feed" element={<NewsFeed />} />
             <Route path="/view" element={<ArticleInfo />} />
           </Routes>
         </Layout>
