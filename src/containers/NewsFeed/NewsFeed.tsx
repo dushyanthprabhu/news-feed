@@ -8,11 +8,11 @@ interface NewsFeedProps {}
 
 function SkeletonCard() {
   return (
-    <div className="flex flex-col space-y-3">
-      <Skeleton className="h-[125px] w-4/5 rounded-xl" />
-      <div className="space-y-2">
-        <Skeleton className="h-4 w-4/5" />
-        <Skeleton className="h-4 w-4/5" />
+    <div className="flex flex-col gap-3">
+      <Skeleton className="h-48 w-full rounded-xl" />
+      <div className="flex flex-col gap-3">
+        <Skeleton className="h-8 w-5/6" />
+        <Skeleton className="h-8 w-4/6" />
       </div>
     </div>
   );
