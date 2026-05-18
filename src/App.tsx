@@ -30,7 +30,7 @@ function App() {
         return;
       });
     } else {
-      // newArticles = await fetchCountryNews();
+      newArticles = await fetchCountryNews();
     }
     dispatch(saveArticles(newArticles));
   };
