@@ -6,13 +6,13 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 interface NewsFeedProps {}
 
-export function SkeletonCard() {
+function SkeletonCard() {
   return (
     <div className="flex flex-col space-y-3">
-      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+      <Skeleton className="h-[125px] w-4/5 rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[250px]" />
-        <Skeleton className="h-4 w-[200px]" />
+        <Skeleton className="h-4 w-4/5" />
+        <Skeleton className="h-4 w-4/5" />
       </div>
     </div>
   );
@@ -21,13 +21,13 @@ export function SkeletonCard() {
 function NewsFeed({}: NewsFeedProps) {
   const articles = useSelector((state: RootState) => state.newsfeed.articles);
   const searchArticles = useSelector(
-    (state: RootState) => state.searcharticle.searchArticles
+    (state: RootState) => state.searcharticle.searchArticles,
   );
   const searchKeyword = useSelector(
-    (state: RootState) => state.searcharticle.searchKeyword
+    (state: RootState) => state.searcharticle.searchKeyword,
   );
   const search = useSelector((state: RootState) => state.searcharticle.search);
-  
+
   const getArticles = () => {
     if (search) {
       return searchArticles;
@@ -42,6 +42,7 @@ function NewsFeed({}: NewsFeedProps) {
       <div className="grid gap-5 tablet:grid-cols-1 laptop:grid-cols-2 desktop:grid-cols-3">
         {searchArticles.length > 0 || articles?.length > 0
           ? getArticles()?.map((article: Article) => {
+              console.log(article);
               return <ArticleCard article={article} />;
             })
           : Array.from({ length: 15 }).map((_, index) => {

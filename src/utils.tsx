@@ -5,7 +5,7 @@ export const getTimeDifference = (publishedAt: string) => {
   let hoursDifference: number = timeDifference / (1000 * 60 * 60);
   hoursDifference = Math.ceil(hoursDifference - 24);
   if (hoursDifference < 24) {
-    return hoursDifference + " hours ago";
+    return hoursDifference + " hr ago";
   } else {
     return hoursDifference / 24 + " day ago";
   }

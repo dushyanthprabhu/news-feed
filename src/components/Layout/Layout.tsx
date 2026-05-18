@@ -10,9 +10,9 @@ function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <div className="bg-zinc-300 flex gap-30 justify-center py-16">
-        {children}
-        <RecentFeed/>
+      <div className="min-h-screen bg-gray-100 flex gap-30 justify-center py-16">
+        <div className="w-3/4 mx-12">{children}</div>
+        <RecentFeed />
       </div>
       <Footer />
     </>
