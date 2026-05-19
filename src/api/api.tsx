@@ -16,9 +16,9 @@ const fetchCountryNews = async () => {
     const response = await axios.post(
       "https://news-feed-backend-yrdx.onrender.com/news-feed",
       {
-        endpoint: "top-headlines",
+        endpoint: topHeadlines,
         params: {
-          country: "us",
+          country: country,
           category: "business",
         },
       },
