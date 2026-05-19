@@ -13,13 +13,16 @@ const everything = "everything";
 
 const fetchCountryNews = async () => {
   try {
-    const response = await axios.get(baseUrl + topHeadlines, {
-      params: {
-        category: "business",
-        country: country,
-        apiKey: apiKey,
+    const response = await axios.post(
+      "https://news-feed-backend-yrdx.onrender.com/news-feed",
+      {
+        endpoint: "top-headlines",
+        params: {
+          country: "us",
+          category: "business",
+        },
       },
-    });
+    );
     const articles = response.data.articles;
     return articles;
   } catch (error) {
